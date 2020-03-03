@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>drum-kit</title>
+    <style>
+        .keys{
+            display: flex;
+        }
+        .key{
+            height: 120px;
+            width: 40px;
+            /* background-color: grey; */
+            transition: all 1s;
+            display: flex;
+            justify-content: center;  
+            border: black 1px solid;
+        }
+        .key span{
+            /* background-color: orange; */
+            align-self: flex-end;
+            padding-bottom: 20px;
+        }
+        .playing{
+            transition: all 0.07s;
+            background-color: red;
+            font-size: 40px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="keys">
+        <div data-key="65" class="key">
+            <span class="sound">A</span>
+        </div>
+        <div data-key="83" class="key">
+            <span class="sound">S</span>
+        </div>
+        <div data-key="68" class="key">
+            <span class="sound">D</span>
+        </div>
+        <div data-key="70" class="key">
+            <span class="sound">F</span>
+        </div>
+        <div data-key="71" class="key">
+            <span class="sound">G</span>
+        </div>
+        <div data-key="72" class="key">
+            <span class="sound">H</span>
+        </div>
+        <div data-key="74" class="key">
+            <span class="sound">J</span>
+        </div>
+    </div>
+
+    <audio data-key="65" src="sounds/do.m4a"></audio>
+    <audio data-key="83" src="sounds/re.m4a"></audio>
+    <audio data-key="68" src="sounds/mi.m4a"></audio>
+    <audio data-key="70" src="sounds/fa.m4a"></audio>
+    <audio data-key="71" src="sounds/sol.m4a"></audio>
+    <audio data-key="72" src="sounds/la.m4a"></audio>
+    <audio data-key="74" src="sounds/si.m4a"></audio>
+
+
+    <script src="sounds.js"></script>
+</body>
+</html>
